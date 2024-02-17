@@ -349,7 +349,7 @@ function includesIgnCase(mainString, subString) {
 function addRankedTrainee(trainee) {
   console.log(trainee);
   for (let i = 0; i < ranking.length; i++) {
-    if (ranking[i].id === -1) { // if spot is blank denoted by -1 id
+    if (ranking[i].id === -1 && !trainee.eliminated) { // if spot is blank denoted by -1 id
       ranking[i] = trainee;
       return true;
     }
